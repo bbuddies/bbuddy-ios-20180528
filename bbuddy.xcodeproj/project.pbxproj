@@ -58,18 +58,23 @@
 		6676919da9fd88c03e585bec /* Typhoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5409441E5C7B9B004984CE /* Typhoon.framework */; };
 		6e7c6bd6e7e3896e7133a90c /* Cely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9BE17E1E481B580092439B /* Cely.framework */; };
 		7fb6243c66800b9d27ddd87a /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1A95B71E4B518500B03F12 /* Runes.framework */; };
-		90a9536ef1f6fb2d9ca246d8 /* calabash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = bea15760a047c1dd573eee03 /* calabash.framework */; };
 		9342814f1996b9f368fa333e /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95C71E4DF1AE00B03F12 /* Api.swift */; };
 		9550edf0700089223037f0ad /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C545FD71E49BCA1004225E7 /* Moya.framework */; };
 		97e6243cf636338fd4194361 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C545FD11E48B18F004225E7 /* MainTabBarViewController.swift */; };
 		99a31dfd06d6ec38a68b82bf /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 0C1A95CC1E4EC76100B03F12 /* Cartfile.private */; };
 		A453C33620BCEA87001BFE98 /* BudgetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B931420BC0A3C00B0288B /* BudgetTest.swift */; };
+		A453C33720BCF85D001BFE98 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B92E020BBE2CB00B0288B /* Budget.swift */; };
+		A453C33820BCF85D001BFE98 /* Budgets.model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B92DA20BBD63000B0288B /* Budgets.model.swift */; };
+		A453C33920BCF85D001BFE98 /* Budget.dto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B92DC20BBD65300B0288B /* Budget.dto.swift */; };
 		A46B92DB20BBD63000B0288B /* Budgets.model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B92DA20BBD63000B0288B /* Budgets.model.swift */; };
 		A46B92DD20BBD65300B0288B /* Budget.dto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B92DC20BBD65300B0288B /* Budget.dto.swift */; };
 		A46B92DF20BBDEB900B0288B /* BudgetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B92DE20BBDEB900B0288B /* BudgetsTableViewController.swift */; };
 		A46B92E120BBE2CB00B0288B /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B92E020BBE2CB00B0288B /* Budget.swift */; };
 		A46B931120BBF9FD00B0288B /* BudgetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B931020BBF9FD00B0288B /* BudgetDetailViewController.swift */; };
 		A46B931320BBFBEC00B0288B /* MonthYearPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B931220BBFBEC00B0288B /* MonthYearPickerView.swift */; };
+		A48F534320BD173D00523F38 /* BudgetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B92DE20BBDEB900B0288B /* BudgetsTableViewController.swift */; };
+		A48F534420BD174000523F38 /* BudgetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B931020BBF9FD00B0288B /* BudgetDetailViewController.swift */; };
+		A48F534520BD176200523F38 /* MonthYearPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B931220BBFBEC00B0288B /* MonthYearPickerView.swift */; };
 		EBC6D04DCAFFA2057D06FB24 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC6D80ADA8E08B87CFC678B /* DTO.swift */; };
 		EBC6D8B83F686E019CA3BAC6 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC6D80ADA8E08B87CFC678B /* DTO.swift */; };
 		EBC6D92F1E3A9DBB80672EB7 /* Accounts.model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC6DAB39A17406061B40971 /* Accounts.model.swift */; };
@@ -203,7 +208,6 @@
 				14845eab1faa2b1528a538ff /* Curry.framework in Frameworks */,
 				6676919da9fd88c03e585bec /* Typhoon.framework in Frameworks */,
 				3e510212e53982c462fe5a9c /* CFNetwork.framework in Frameworks */,
-				90a9536ef1f6fb2d9ca246d8 /* calabash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,18 +563,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A48F534520BD176200523F38 /* MonthYearPickerView.swift in Sources */,
 				222da3d8b5e0d56287d188d0 /* MeViewController.swift in Sources */,
+				A453C33820BCF85D001BFE98 /* Budgets.model.swift in Sources */,
 				da622fade7652e52dbf2b71d /* Account.model.swift in Sources */,
+				A453C33720BCF85D001BFE98 /* Budget.swift in Sources */,
 				edfc7aef8db95c8815cf87e6 /* Account.dto.swift in Sources */,
+				A453C33920BCF85D001BFE98 /* Budget.dto.swift in Sources */,
 				e9a291d81e58a66016634989 /* AccountDetailViewController.swift in Sources */,
 				4b6dff9a17af16d320740a2c /* LoginStyles.swift in Sources */,
 				d027b996b58363eb1ee81e7e /* User.swift in Sources */,
 				3b36d6776f7471e62ad6f888 /* AccountsTableViewController.swift in Sources */,
 				9342814f1996b9f368fa333e /* Api.swift in Sources */,
 				97e6243cf636338fd4194361 /* MainTabBarViewController.swift in Sources */,
+				A48F534320BD173D00523F38 /* BudgetsTableViewController.swift in Sources */,
 				19fe892539bc4e20dfcc9d20 /* AuthPlugin.swift in Sources */,
 				46518fc86a93bb32ca47da26 /* AppDelegate.swift in Sources */,
 				f28f603fd97f30329dcb22f0 /* ApiDefinition.swift in Sources */,
+				A48F534420BD174000523F38 /* BudgetDetailViewController.swift in Sources */,
 				440b96c67f742c7946d015ce /* DashboardViewController.swift in Sources */,
 				e7782ee485bec12ee3d2425d /* Accounts.model.swift in Sources */,
 				EBC6D04DCAFFA2057D06FB24 /* DTO.swift in Sources */,
@@ -800,12 +810,10 @@
 					"\"$(SRCROOT)\"",
 				);
 				INFOPLIST_FILE = bbuddy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-force_load",
-					"\"$(SRCROOT)/calabash.framework/calabash\"",
 					"-lstdc++",
 				);
 				OTHER_SWIFT_FLAGS = "";
@@ -825,12 +833,10 @@
 					"\"$(SRCROOT)\"",
 				);
 				INFOPLIST_FILE = bbuddy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-force_load",
-					"\"$(SRCROOT)/calabash.framework/calabash\"",
 					"-lstdc++",
 				);
 				OTHER_SWIFT_FLAGS = "-DTEST";

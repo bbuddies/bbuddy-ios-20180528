@@ -9,7 +9,7 @@
 import UIKit
 
 class BudgetDetailViewController: UIViewController {
-
+    
     @IBOutlet weak var monthField: UITextField!
     @IBOutlet weak var amountField: UITextField!
     
@@ -34,7 +34,7 @@ class BudgetDetailViewController: UIViewController {
             me.budget.month = month
             me.monthField.text = month
         }
-        monthField.inputView = picker
+//        monthField.inputView = picker
         picker.onDateSelected!(picker.month, picker.year)
     }
     

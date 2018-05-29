@@ -10,6 +10,8 @@ import UIKit
 
 class BudgetsTableViewController: UITableViewController {
 
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    
     private var budgets = Budgets() {
         didSet{
             tableView.reloadData()
@@ -24,6 +26,11 @@ class BudgetsTableViewController: UITableViewController {
         DispatchQueue.main.async { [unowned me = self] in
             me.tableView.reloadData()
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addButton.accessibilityIdentifier = "add"
     }
     
     override func viewWillAppear(_ animated: Bool) {
