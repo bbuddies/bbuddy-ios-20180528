@@ -38,7 +38,7 @@ struct AuthPlugin: PluginType {
     }
     
     func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
-        if let headers = (result.value?.response as? HTTPURLResponse)?.allHeaderFields,
+        if let headers = (result.value?.response)?.allHeaderFields,
             let uid = headers["uid"] as? String,
             let client = headers["client"] as? String,
             let accessToken = headers["access-token"] as? String,

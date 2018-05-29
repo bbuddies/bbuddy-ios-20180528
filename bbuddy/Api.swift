@@ -114,4 +114,31 @@ class Api {
         }
     }
     
+    func getBudgets(_ action: @escaping ([DTO.Budget]) -> Void) {
+        request(.getBudgets) { [unowned me = self] response in
+            do {
+                action(try me.mapArray(response))
+            } catch {
+                
+            }
+        }
+    }
+    
+    func addBudget(_ budget: DTO.Budget, to action: @escaping () -> Void) {
+        request(.addBudget(budget: budget)) { _ in
+            action()
+        }
+    }
+    
+    func updateBudget(_ budget: DTO.Budget, to action: @escaping () -> Void){
+        request(.updateBudget(budget: budget)) { _ in
+            action()
+        }
+    }
+    
+    func deleteBudget(_ budget: DTO.Budget, to action: @escaping () -> Void){
+        request(.deleteBudget(budget: budget)) { _ in
+            action()
+        }
+    }
 }

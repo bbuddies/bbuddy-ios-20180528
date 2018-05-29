@@ -63,6 +63,13 @@
 		9550edf0700089223037f0ad /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C545FD71E49BCA1004225E7 /* Moya.framework */; };
 		97e6243cf636338fd4194361 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C545FD11E48B18F004225E7 /* MainTabBarViewController.swift */; };
 		99a31dfd06d6ec38a68b82bf /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 0C1A95CC1E4EC76100B03F12 /* Cartfile.private */; };
+		A453C33620BCEA87001BFE98 /* BudgetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B931420BC0A3C00B0288B /* BudgetTest.swift */; };
+		A46B92DB20BBD63000B0288B /* Budgets.model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B92DA20BBD63000B0288B /* Budgets.model.swift */; };
+		A46B92DD20BBD65300B0288B /* Budget.dto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B92DC20BBD65300B0288B /* Budget.dto.swift */; };
+		A46B92DF20BBDEB900B0288B /* BudgetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B92DE20BBDEB900B0288B /* BudgetsTableViewController.swift */; };
+		A46B92E120BBE2CB00B0288B /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B92E020BBE2CB00B0288B /* Budget.swift */; };
+		A46B931120BBF9FD00B0288B /* BudgetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B931020BBF9FD00B0288B /* BudgetDetailViewController.swift */; };
+		A46B931320BBFBEC00B0288B /* MonthYearPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B931220BBFBEC00B0288B /* MonthYearPickerView.swift */; };
 		EBC6D04DCAFFA2057D06FB24 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC6D80ADA8E08B87CFC678B /* DTO.swift */; };
 		EBC6D8B83F686E019CA3BAC6 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC6D80ADA8E08B87CFC678B /* DTO.swift */; };
 		EBC6D92F1E3A9DBB80672EB7 /* Accounts.model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC6DAB39A17406061B40971 /* Accounts.model.swift */; };
@@ -143,6 +150,13 @@
 		0CC744C51E2C6781007EC830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0c25ed4e90875cbf6e4dd15c /* CFNetwork.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		746D8FCE1E6EE6C8007D75D1 /* bbuddy-cal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bbuddy-cal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A46B92DA20BBD63000B0288B /* Budgets.model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budgets.model.swift; sourceTree = "<group>"; };
+		A46B92DC20BBD65300B0288B /* Budget.dto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Budget.dto.swift; path = DTO/Budget.dto.swift; sourceTree = "<group>"; };
+		A46B92DE20BBDEB900B0288B /* BudgetsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsTableViewController.swift; sourceTree = "<group>"; };
+		A46B92E020BBE2CB00B0288B /* Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		A46B931020BBF9FD00B0288B /* BudgetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailViewController.swift; sourceTree = "<group>"; };
+		A46B931220BBFBEC00B0288B /* MonthYearPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYearPickerView.swift; sourceTree = "<group>"; };
+		A46B931420BC0A3C00B0288B /* BudgetTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetTest.swift; sourceTree = "<group>"; };
 		EBC6D80ADA8E08B87CFC678B /* DTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
 		EBC6DAB39A17406061B40971 /* Accounts.model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accounts.model.swift; sourceTree = "<group>"; };
 		bea15760a047c1dd573eee03 /* calabash.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; path = calabash.framework; sourceTree = "<group>"; };
@@ -202,6 +216,7 @@
 				0C97CD521F3186A800DF51B9 /* GeneratedMocks.swift */,
 				0C0AA8F81E52AB83008B4B00 /* AccountTest.swift */,
 				0C1282F41E73B3ED00D72735 /* AccountsTest.swift */,
+				A46B931420BC0A3C00B0288B /* BudgetTest.swift */,
 				0C0AA8ED1E52AAAE008B4B00 /* Info.plist */,
 			);
 			path = bbuddyTests;
@@ -211,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				0C0AA8FD1E52B81B008B4B00 /* Account.dto.swift */,
+				A46B92DC20BBD65300B0288B /* Budget.dto.swift */,
 				EBC6D80ADA8E08B87CFC678B /* DTO.swift */,
 			);
 			name = DTO;
@@ -221,6 +237,8 @@
 			children = (
 				0C0AA9001E52B892008B4B00 /* Account.model.swift */,
 				EBC6DAB39A17406061B40971 /* Accounts.model.swift */,
+				A46B92E020BBE2CB00B0288B /* Budget.swift */,
+				A46B92DA20BBD63000B0288B /* Budgets.model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -281,9 +299,12 @@
 				0CC744BD1E2C6781007EC830 /* Main.storyboard */,
 				0C1A95C51E4D936D00B03F12 /* AccountDetailViewController.swift */,
 				0C1A95B11E4B0CAB00B03F12 /* AccountsTableViewController.swift */,
+				A46B931020BBF9FD00B0288B /* BudgetDetailViewController.swift */,
+				A46B92DE20BBDEB900B0288B /* BudgetsTableViewController.swift */,
 				0C545FD31E499FD0004225E7 /* LoginStyles.swift */,
 				0C545FD11E48B18F004225E7 /* MainTabBarViewController.swift */,
 				0C545FC61E486598004225E7 /* MeViewController.swift */,
+				A46B931220BBFBEC00B0288B /* MonthYearPickerView.swift */,
 				0CC744C01E2C6781007EC830 /* Assets.xcassets */,
 				0CC744C21E2C6781007EC830 /* LaunchScreen.storyboard */,
 				0CC744C51E2C6781007EC830 /* Info.plist */,
@@ -299,10 +320,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C0AA8F21E52AAAE008B4B00 /* Build configuration list for PBXNativeTarget "bbuddyTests" */;
 			buildPhases = (
+				0C0AA8F71E52AAD9008B4B00 /* ShellScript */,
 				0C0AA8E51E52AAAE008B4B00 /* Sources */,
 				0C0AA8E61E52AAAE008B4B00 /* Frameworks */,
 				0C0AA8E71E52AAAE008B4B00 /* Resources */,
-				0C0AA8F71E52AAD9008B4B00 /* ShellScript */,
 				0CD98E121E7A89880017C334 /* CopyFiles */,
 			);
 			buildRules = (
@@ -358,7 +379,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "odd-e";
 				TargetAttributes = {
 					0C0AA8E81E52AAAE008B4B00 = {
@@ -369,7 +390,7 @@
 					};
 					0CC744B31E2C6781007EC830 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 4HGH7Y559V;
+						DevelopmentTeam = RE4S5JB5G4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -501,6 +522,7 @@
 			files = (
 				0C1282F51E73B3ED00D72735 /* AccountsTest.swift in Sources */,
 				0C97CD531F3186A800DF51B9 /* GeneratedMocks.swift in Sources */,
+				A453C33620BCEA87001BFE98 /* BudgetTest.swift in Sources */,
 				0C0AA8F91E52AB83008B4B00 /* AccountTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,18 +531,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46B931320BBFBEC00B0288B /* MonthYearPickerView.swift in Sources */,
 				0C545FC71E486598004225E7 /* MeViewController.swift in Sources */,
 				0C0AA9011E52B892008B4B00 /* Account.model.swift in Sources */,
 				0C0AA8FE1E52B81B008B4B00 /* Account.dto.swift in Sources */,
 				0C1A95C61E4D936D00B03F12 /* AccountDetailViewController.swift in Sources */,
 				0C545FD41E499FD0004225E7 /* LoginStyles.swift in Sources */,
 				0C9BE1841E481D000092439B /* User.swift in Sources */,
+				A46B92DD20BBD65300B0288B /* Budget.dto.swift in Sources */,
 				0C1A95B21E4B0CAB00B03F12 /* AccountsTableViewController.swift in Sources */,
 				0C1A95C81E4DF1AE00B03F12 /* Api.swift in Sources */,
 				0C545FD21E48B18F004225E7 /* MainTabBarViewController.swift in Sources */,
 				0C1A95CA1E4E01FC00B03F12 /* AuthPlugin.swift in Sources */,
+				A46B92E120BBE2CB00B0288B /* Budget.swift in Sources */,
 				0CC744B81E2C6781007EC830 /* AppDelegate.swift in Sources */,
+				A46B92DB20BBD63000B0288B /* Budgets.model.swift in Sources */,
 				0C545FD61E49AEAA004225E7 /* ApiDefinition.swift in Sources */,
+				A46B92DF20BBDEB900B0288B /* BudgetsTableViewController.swift in Sources */,
+				A46B931120BBF9FD00B0288B /* BudgetDetailViewController.swift in Sources */,
 				0CC744BA1E2C6781007EC830 /* DashboardViewController.swift in Sources */,
 				EBC6D92F1E3A9DBB80672EB7 /* Accounts.model.swift in Sources */,
 				EBC6D8B83F686E019CA3BAC6 /* DTO.swift in Sources */,
@@ -624,15 +652,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -656,7 +692,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -675,15 +711,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -701,7 +745,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -714,13 +758,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4HGH7Y559V;
+				DEVELOPMENT_TEAM = RE4S5JB5G4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = bbuddy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "odd-e.bbuddy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -732,13 +776,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4HGH7Y559V;
+				DEVELOPMENT_TEAM = RE4S5JB5G4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = bbuddy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "odd-e.bbuddy";
 				PRODUCT_NAME = "$(TARGET_NAME)";

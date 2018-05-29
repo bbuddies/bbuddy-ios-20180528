@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let libraryPath = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true).first
+        print("libraryPath = \(libraryPath ?? "")")
+        
         // Override point for customization after application launch.
         Cely.setup(with: window!, forModel: User(), requiredProperties: [.token, .email, .client], withOptions: [
             .loginStyle: CottonCandy(),
