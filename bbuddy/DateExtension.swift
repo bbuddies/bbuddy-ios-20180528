@@ -37,24 +37,12 @@ extension Date {
         return calendar.date(from: dateComponents)!
     }
     
-    func daysPastInMonth() -> Int {
-        return DateSpan(from: self.firstDayOfMonth(), to: self).days
-    }
-    
-    func daysRemainInMonth() -> Int {
+    func lastDayOfMonth() -> Date {
         let calendar = NSCalendar.current
         let dateComponents = NSDateComponents()
         dateComponents.month = 1
         dateComponents.day = -1
         dateComponents.timeZone = calendar.timeZone
-        let lastDayOfMonth = calendar.date(byAdding: dateComponents as DateComponents, to: self.firstDayOfMonth())!
-        return DateSpan(from: self, to: lastDayOfMonth).days
-    }
-    
-    func numOfMonthYear() -> Int {
-        let calendar = Calendar.current
-        let year = calendar.component(.year, from: self)
-        let month = calendar.component(.month, from: self)
-        return year * 100 + month
+        return calendar.date(byAdding: dateComponents as DateComponents, to: self.firstDayOfMonth())!
     }
 }

@@ -32,32 +32,9 @@ struct DateSpan {
         return to.timeIntervalSince(from)
     }
     
-    func positionInMonths(date: Date) throws -> PositionResult {
-        
-        let num = date.numOfMonthYear()
-        let fromNum = from.numOfMonthYear()
-        let toNum = to.numOfMonthYear()
-        
-        if fromNum == toNum {
-            return num == fromNum ? .same : .out
-        }
-        
-        if num < fromNum || num > toNum {
-            return .out
-        }
-        
-        if num == fromNum {
-            return .left
-        }
-        
-        if num == toNum {
-            return .right
-        }
-        
-        if num > fromNum && num < toNum {
-            return .middle
-        }
-        
-        throw ApplicationError.argument
-    }
+    func overlappingDays(another: DateSpan) -> Int {
+        let left = from > another.from ? from : another.from
+        let right = to < another.to ? to : another.to
+        return DateSpan(from: left, to: right).days
+    }    
 }

@@ -36,6 +36,11 @@ class Budget {
         return budget
     }
     
+    var span: DateSpan {
+        let date = self.startDate
+        return DateSpan(from: startDate, to: date.lastDayOfMonth())
+    }
+    
     var startDate: Date {
         var array = self.month.components(separatedBy: "-")
         let calendar = NSCalendar.current

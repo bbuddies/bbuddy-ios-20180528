@@ -20,22 +20,7 @@ class BudgetCalculator {
         
         for budget in budgets {
             
-            let date = budget.startDate
-            let result = try span.positionInMonths(date: date)
-            
-            switch result {
-            case .same:
-                sum = Decimal(budget.amount) * Decimal(span.days) / Decimal(date.daysInCurrentMonth())
-                break
-            case .left:
-                sum += Decimal(budget.amount) * Decimal(span.from.daysRemainInMonth()) / Decimal(span.from.daysInCurrentMonth())
-            case .middle:
-                sum += Decimal(budget.amount)
-            case .right:
-                sum += Decimal(budget.amount) * Decimal(span.to.daysPastInMonth()) / Decimal(span.to.daysInCurrentMonth())
-            case .out:
-                continue
-            }
+            sum += Decimal(budget.amount) * Decimal(span.overlappingDays(another: budget.span)) / Decimal(budget.startDate.daysInCurrentMonth())
         }
         
         return sum
