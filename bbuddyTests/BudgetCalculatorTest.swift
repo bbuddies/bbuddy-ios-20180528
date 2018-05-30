@@ -31,8 +31,8 @@ class BudgetCalculatorTest: XCTestCase {
         
         let from = dateBy(year: 2018, month: 1, day: 10)
         let to = dateBy(year: 2018, month: 4, day: 20)
-        
-        XCTAssertEqual(400, try calculator.calculate(from: from, to: to, budgets: budgets))
+        let span = DateSpan.init(from: from, to: to)
+        XCTAssertEqual(400, try calculator.calculate(span: span, budgets: budgets))
     }
     
     func testSkipMultipleMonth() throws {
@@ -43,8 +43,9 @@ class BudgetCalculatorTest: XCTestCase {
         
         let from = dateBy(year: 2018, month: 1, day: 10)
         let to = dateBy(year: 2018, month: 4, day: 20)
+        let span = DateSpan.init(from: from, to: to)
         
-        XCTAssertEqual(300, try calculator.calculate(from: from, to: to, budgets: budgets))
+        XCTAssertEqual(300, try calculator.calculate(span: span, budgets: budgets))
     }
     
     func testSameMonth() throws {
@@ -54,8 +55,9 @@ class BudgetCalculatorTest: XCTestCase {
         
         let from = dateBy(year: 2018, month: 1, day: 10)
         let to = dateBy(year: 2018, month: 1, day: 20)
+        let span = DateSpan.init(from: from, to: to)
         
-        XCTAssertEqual(Decimal(100*11)/Decimal(31), try calculator.calculate(from: from, to: to, budgets: budgets))
+        XCTAssertEqual(Decimal(100*11)/Decimal(31), try calculator.calculate(span: span, budgets: budgets))
     }
     
     func testEmptyMonth() throws {
@@ -64,8 +66,9 @@ class BudgetCalculatorTest: XCTestCase {
         
         let from = dateBy(year: 2018, month: 1, day: 10)
         let to = dateBy(year: 2018, month: 2, day: 20)
+        let span = DateSpan.init(from: from, to: to)
         
-        XCTAssertEqual(0, try calculator.calculate(from: from, to: to, budgets: budgets))
+        XCTAssertEqual(0, try calculator.calculate(span: span, budgets: budgets))
     }
     
     func testCrossYear() throws {
@@ -77,8 +80,9 @@ class BudgetCalculatorTest: XCTestCase {
         
         let from = dateBy(year: 2017, month: 12, day: 1)
         let to = dateBy(year: 2018, month: 4, day: 30)
+        let span = DateSpan.init(from: from, to: to)
         
-        XCTAssertEqual(500, try calculator.calculate(from: from, to: to, budgets: budgets))
+        XCTAssertEqual(500, try calculator.calculate(span: span, budgets: budgets))
     }
     
     func testInvalidArgument() throws {
@@ -90,9 +94,10 @@ class BudgetCalculatorTest: XCTestCase {
         
         let from = dateBy(year: 2018, month: 3, day: 1)
         let to = dateBy(year: 2018, month: 1, day: 30)
+        let span = DateSpan.init(from: from, to: to)
         
         do {
-            _ = try calculator.calculate(from: from, to: to, budgets: budgets)
+            _ = try calculator.calculate(span: span, budgets: budgets)
         } catch let e as ApplicationError {
             XCTAssertEqual(ApplicationError.argument, e)
             return

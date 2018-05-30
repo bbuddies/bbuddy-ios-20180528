@@ -10,9 +10,9 @@ import Foundation
 
 class BudgetCalculator {
     
-    func calculate(from: Date, to: Date, budgets: [Budget]) throws -> Decimal {
+    func calculate(span: DateSpan, budgets: [Budget]) throws -> Decimal {
         
-        if to.timeIntervalSince(from) < 0 {
+        if span.interval < 0 {
             throw ApplicationError.argument
         }
         
@@ -21,18 +21,18 @@ class BudgetCalculator {
         for budget in budgets {
             
             let date = budget.startDate
-            let result = try date.positionInMonths(from: from, to: to)
+            let result = try span.positionInMonths(date: date)
             
             switch result {
             case .same:
-                sum = Decimal(budget.amount) * Decimal(Date.days(from: from, to: to)) / Decimal(date.daysInCurrentMonth())
+                sum = Decimal(budget.amount) * Decimal(span.days) / Decimal(date.daysInCurrentMonth())
                 break
             case .left:
-                sum += Decimal(budget.amount) * Decimal(from.daysRemainInMonth()) / Decimal(from.daysInCurrentMonth())
+                sum += Decimal(budget.amount) * Decimal(span.from.daysRemainInMonth()) / Decimal(span.from.daysInCurrentMonth())
             case .middle:
                 sum += Decimal(budget.amount)
             case .right:
-                sum += Decimal(budget.amount) * Decimal(to.daysPastInMonth()) / Decimal(to.daysInCurrentMonth())
+                sum += Decimal(budget.amount) * Decimal(span.to.daysPastInMonth()) / Decimal(span.to.daysInCurrentMonth())
             case .out:
                 continue
             }
