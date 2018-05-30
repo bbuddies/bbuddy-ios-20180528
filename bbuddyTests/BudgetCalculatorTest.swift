@@ -23,70 +23,76 @@ class BudgetCalculatorTest: XCTestCase {
     
     func testFullMultipleMonth() throws {
         let calculator = BudgetCalculator()
-        let budgets: [DTO.Budget] = [.init(id: 0, month: "2018-2", amount: 100),
-                                     .init(id: 0, month: "2018-3", amount: 100),
-                                     .init(id: 0, month: "2018-4", amount: 300)]
+        let data: [DTO.Budget] = [.init(id: 0, month: "2018-2", amount: 100),
+                                  .init(id: 0, month: "2018-3", amount: 100),
+                                  .init(id: 0, month: "2018-4", amount: 300)]
         
-        let start = dateBy(year: 2018, month: 1, day: 10)
-        let end = dateBy(year: 2018, month: 4, day: 20)
+        let budgets = data.map( Budget.from )
         
-        XCTAssertEqual(400, try calculator.calculate(start: start, end: end, budgets: budgets))
+        let from = dateBy(year: 2018, month: 1, day: 10)
+        let to = dateBy(year: 2018, month: 4, day: 20)
+        
+        XCTAssertEqual(400, try calculator.calculate(from: from, to: to, budgets: budgets))
     }
     
     func testSkipMultipleMonth() throws {
         let calculator = BudgetCalculator()
-        let budgets: [DTO.Budget] = [.init(id: 0, month: "2018-2", amount: 100),
-                                     .init(id: 0, month: "2018-4", amount: 300)]
+        let data: [DTO.Budget] = [.init(id: 0, month: "2018-2", amount: 100),
+                                  .init(id: 0, month: "2018-4", amount: 300)]
+        let budgets = data.map( Budget.from )
         
-        let start = dateBy(year: 2018, month: 1, day: 10)
-        let end = dateBy(year: 2018, month: 4, day: 20)
+        let from = dateBy(year: 2018, month: 1, day: 10)
+        let to = dateBy(year: 2018, month: 4, day: 20)
         
-        XCTAssertEqual(300, try calculator.calculate(start: start, end: end, budgets: budgets))
+        XCTAssertEqual(300, try calculator.calculate(from: from, to: to, budgets: budgets))
     }
     
     func testSameMonth() throws {
         let calculator = BudgetCalculator()
-        let budgets: [DTO.Budget] = [.init(id: 0, month: "2018-01", amount: 100)]
+        let data: [DTO.Budget] = [.init(id: 0, month: "2018-01", amount: 100)]
+        let budgets = data.map( Budget.from )
         
-        let start = dateBy(year: 2018, month: 1, day: 10)
-        let end = dateBy(year: 2018, month: 1, day: 20)
+        let from = dateBy(year: 2018, month: 1, day: 10)
+        let to = dateBy(year: 2018, month: 1, day: 20)
         
-        XCTAssertEqual(Decimal(100*11)/Decimal(31), try calculator.calculate(start: start, end: end, budgets: budgets))
+        XCTAssertEqual(Decimal(100*11)/Decimal(31), try calculator.calculate(from: from, to: to, budgets: budgets))
     }
     
     func testEmptyMonth() throws {
         let calculator = BudgetCalculator()
-        let budgets: [DTO.Budget] = []
+        let budgets: [Budget] = []
         
-        let start = dateBy(year: 2018, month: 1, day: 10)
-        let end = dateBy(year: 2018, month: 2, day: 20)
+        let from = dateBy(year: 2018, month: 1, day: 10)
+        let to = dateBy(year: 2018, month: 2, day: 20)
         
-        XCTAssertEqual(0, try calculator.calculate(start: start, end: end, budgets: budgets))
+        XCTAssertEqual(0, try calculator.calculate(from: from, to: to, budgets: budgets))
     }
     
     func testCrossYear() throws {
         let calculator = BudgetCalculator()
-        let budgets: [DTO.Budget] = [.init(id: 0, month: "2017-12", amount: 100),
-                                     .init(id: 0, month: "2018-3", amount: 100),
-                                     .init(id: 0, month: "2018-4", amount: 300)]
+        let data: [DTO.Budget] = [.init(id: 0, month: "2017-12", amount: 100),
+                                  .init(id: 0, month: "2018-3", amount: 100),
+                                  .init(id: 0, month: "2018-4", amount: 300)]
+        let budgets = data.map( Budget.from )
         
-        let start = dateBy(year: 2017, month: 12, day: 1)
-        let end = dateBy(year: 2018, month: 4, day: 30)
+        let from = dateBy(year: 2017, month: 12, day: 1)
+        let to = dateBy(year: 2018, month: 4, day: 30)
         
-        XCTAssertEqual(500, try calculator.calculate(start: start, end: end, budgets: budgets))
+        XCTAssertEqual(500, try calculator.calculate(from: from, to: to, budgets: budgets))
     }
     
     func testInvalidArgument() throws {
         let calculator = BudgetCalculator()
-        let budgets: [DTO.Budget] = [.init(id: 0, month: "2017-12", amount: 100),
-                                     .init(id: 0, month: "2018-3", amount: 100),
-                                     .init(id: 0, month: "2018-4", amount: 300)]
+        let data: [DTO.Budget] = [.init(id: 0, month: "2017-12", amount: 100),
+                                  .init(id: 0, month: "2018-3", amount: 100),
+                                  .init(id: 0, month: "2018-4", amount: 300)]
+        let budgets = data.map( Budget.from )
         
-        let start = dateBy(year: 2018, month: 3, day: 1)
-        let end = dateBy(year: 2018, month: 1, day: 30)
+        let from = dateBy(year: 2018, month: 3, day: 1)
+        let to = dateBy(year: 2018, month: 1, day: 30)
         
         do {
-            _ = try calculator.calculate(start: start, end: end, budgets: budgets)
+            _ = try calculator.calculate(from: from, to: to, budgets: budgets)
         } catch let e as ApplicationError {
             XCTAssertEqual(ApplicationError.argument, e)
             return

@@ -21,8 +21,6 @@
 		0C1A95C61E4D936D00B03F12 /* AccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95C51E4D936D00B03F12 /* AccountDetailViewController.swift */; };
 		0C1A95C81E4DF1AE00B03F12 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95C71E4DF1AE00B03F12 /* Api.swift */; };
 		0C1A95CA1E4E01FC00B03F12 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95C91E4E01FC00B03F12 /* AuthPlugin.swift */; };
-		0C1A95CD1E4EC76100B03F12 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 0C1A95CC1E4EC76100B03F12 /* Cartfile.private */; };
-		0C5409451E5C7B9B004984CE /* Typhoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5409441E5C7B9B004984CE /* Typhoon.framework */; };
 		0C545FC71E486598004225E7 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C545FC61E486598004225E7 /* MeViewController.swift */; };
 		0C545FC91E4869AC004225E7 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 0C545FC81E4869AC004225E7 /* Cartfile */; };
 		0C545FD01E48B052004225E7 /* FontAwesome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C545FCE1E48AFB1004225E7 /* FontAwesome.framework */; };
@@ -61,7 +59,6 @@
 		9342814f1996b9f368fa333e /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95C71E4DF1AE00B03F12 /* Api.swift */; };
 		9550edf0700089223037f0ad /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C545FD71E49BCA1004225E7 /* Moya.framework */; };
 		97e6243cf636338fd4194361 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C545FD11E48B18F004225E7 /* MainTabBarViewController.swift */; };
-		99a31dfd06d6ec38a68b82bf /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 0C1A95CC1E4EC76100B03F12 /* Cartfile.private */; };
 		A453C33620BCEA87001BFE98 /* BudgetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B931420BC0A3C00B0288B /* BudgetTest.swift */; };
 		A453C33720BCF85D001BFE98 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B92E020BBE2CB00B0288B /* Budget.swift */; };
 		A453C33820BCF85D001BFE98 /* Budgets.model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46B92DA20BBD63000B0288B /* Budgets.model.swift */; };
@@ -133,7 +130,6 @@
 		0C1A95C51E4D936D00B03F12 /* AccountDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailViewController.swift; sourceTree = "<group>"; };
 		0C1A95C71E4DF1AE00B03F12 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		0C1A95C91E4E01FC00B03F12 /* AuthPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
-		0C1A95CC1E4EC76100B03F12 /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
 		0C1A95F21E4EC7E500B03F12 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		0C1A95F31E4EC7E500B03F12 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		0C5409441E5C7B9B004984CE /* Typhoon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Typhoon.framework; path = Carthage/Build/iOS/Typhoon.framework; sourceTree = "<group>"; };
@@ -158,6 +154,7 @@
 		0CC744C51E2C6781007EC830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0c25ed4e90875cbf6e4dd15c /* CFNetwork.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		746D8FCE1E6EE6C8007D75D1 /* bbuddy-cal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bbuddy-cal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A40F6FBA20BE5CEA007E196E /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
 		A46B92DA20BBD63000B0288B /* Budgets.model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budgets.model.swift; sourceTree = "<group>"; };
 		A46B92DC20BBD65300B0288B /* Budget.dto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Budget.dto.swift; path = DTO/Budget.dto.swift; sourceTree = "<group>"; };
 		A46B92DE20BBDEB900B0288B /* BudgetsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsTableViewController.swift; sourceTree = "<group>"; };
@@ -196,7 +193,6 @@
 				0C1A95B61E4B456200B03F12 /* Argo.framework in Frameworks */,
 				0C1A95B81E4B518500B03F12 /* Runes.framework in Frameworks */,
 				0C1A95BA1E4B5E5300B03F12 /* Curry.framework in Frameworks */,
-				0C5409451E5C7B9B004984CE /* Typhoon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,8 +275,8 @@
 		0CC744AB1E2C6781007EC830 = {
 			isa = PBXGroup;
 			children = (
-				0C1A95CC1E4EC76100B03F12 /* Cartfile.private */,
 				0C545FC81E4869AC004225E7 /* Cartfile */,
+				A40F6FBA20BE5CEA007E196E /* Cartfile.private */,
 				0CC744B61E2C6781007EC830 /* bbuddy */,
 				0C0AA8EA1E52AAAE008B4B00 /* bbuddyTests */,
 				0CC744B51E2C6781007EC830 /* Products */,
@@ -442,7 +438,6 @@
 			files = (
 				0CC744C41E2C6781007EC830 /* LaunchScreen.storyboard in Resources */,
 				0CC744C11E2C6781007EC830 /* Assets.xcassets in Resources */,
-				0C1A95CD1E4EC76100B03F12 /* Cartfile.private in Resources */,
 				0C545FC91E4869AC004225E7 /* Cartfile in Resources */,
 				0CC744BF1E2C6781007EC830 /* Main.storyboard in Resources */,
 			);
@@ -454,7 +449,6 @@
 			files = (
 				5f654fbd5db93c1c700ee626 /* LaunchScreen.storyboard in Resources */,
 				4a5f16eee44277aaf67b56b5 /* Assets.xcassets in Resources */,
-				99a31dfd06d6ec38a68b82bf /* Cartfile.private in Resources */,
 				aa823d3e52a3e8916a4f92d1 /* Cartfile in Resources */,
 				b010197f2148636eb5117101 /* Main.storyboard in Resources */,
 			);
@@ -492,7 +486,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Typhoon.framework",
 			);
 			name = "Run Script";
 			outputPaths = (
